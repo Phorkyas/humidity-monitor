@@ -1,0 +1,57 @@
+digraph g {
+fontname="Helvetica,Arial,sans-serif"
+node [fontname="Helvetica,Arial,sans-serif"]
+edge [fontname="Helvetica,Arial,sans-serif"]
+graph [
+rankdir = "LR"
+bgcolor = "white:lightblue"
+style="filled"
+gradientangle = 270];
+node [
+fontsize = "16"
+shape = "ellipse"
+style="filled"
+gradientangle=90
+];
+edge [
+];
+"mes1" [
+label = "sensor (T,%rh), room 1"
+shape = "ellipse"
+gradientangle = 90
+fillcolor = "brown:yellow"
+];
+"cont1" [
+label = "microcontroller 1"
+shape = "box"
+fillcolor = "white:orange"
+gradientangle = 0
+];
+"mes2" [
+label = "sensor (T,%rh), room 2"
+shape = "ellipse"
+fillcolor = "brown:yellow"
+gradientangle = 90
+];
+"cont2" [
+label = "microcontroller 2"
+shape = "record"
+fillcolor = "white:orange"
+gradientangle = 90
+];
+"webserver" [
+shape = "box",
+fillcolor = "lightblue:orange"
+gradientangle = 0
+];
+"dashboard" [
+shape = "ellipse"
+fillcolor = "orange:brown"
+gradientangle = 90
+];
+mes1 -> cont1;
+mes2 -> cont2;
+cont1 -> webserver [label = "send data"];
+cont2 -> webserver [label = "send data"];
+webserver -> dashboard;
+}

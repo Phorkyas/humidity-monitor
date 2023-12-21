@@ -1,0 +1,39 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-introduction-and-goals]]
+==	Einführung und Ziele
+
+
+=== Aufgabenstellung
+
+Ziel dieses Projekts ist die Luftfeuchtigskeitsüberwachung in mehreren Räumen 
+einer Wohnung. Mit herkömmlichen Sensoren können wir nur einen momentanen
+Wert erfassen, wenn wir auf die Anzeige blicken. Wir wollen das ganze zeitaufgelöst
+für mehrere Räume zentral sammeln und auf einer Übersichtsseite anzeigen.
+
+Der Spaß und das Lernen soll im Vordergrund stehen.
+
+=== Qualitätsziele
+
+Es soll nur ein kleines System gebaut werden, das Anlass geben kann, in
+verschiedene IT-Bereiche hineinzuschauen:
+
+. Arbeiten mit einem Microcontroller:
+.. Wie schließe ich den Sensor?
+.. Wie lese ich die Daten aus?
+.. Wie verschicke ich die Daten?
+. Was ist ein Webserver?
+. Was ist eine Datenbank?
+
+Die entstehende Software sollte klein und funktional sein und nur lokal im
+eigenen Netz verfügbar.
+
+=== Stakeholder
+
+
+[cols="1,1,2" options="header"]
+|===
+|Rolle |Kontakt |Erwartungshaltung
+| PO, Architekt | ich | begeisterte Mitwirkende, interessante Daten
+| Opfer | Rest der Familie | nicht zu komischer IT-Kram 
+|===

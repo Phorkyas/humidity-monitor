@@ -1,0 +1,7 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-architecture-constraints]]
+== Randbedingungen
+
+Auch wenig IT-Begeisterung soll die Teilnahme nicht verhageln. Deshalb sollten
+einsteigerfreundliche Sprachen und Frameworks eingesetzt werden, z.B. Python.
