@@ -1,0 +1,22 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-deployment-view]]
+== Verteilungssicht
+
+Some reddit users advised the BME680 sensor should be more accurate than DHT 22
+and ESP8266 should be sufficent. So we went with that. The webserver should
+run on a Rasperry Pi (Zero, or 3). 
+
+=== Infrastruktur
+
+.A Bereitstellungsumgebung
+image::deployment-view.png[Bereitstellungsumgebung]
+
+_**<Übersichtsdiagramm>**_
+
+Begründung:: _<Erläuternder Text>_
+
+Qualitäts- und/oder Leistungsmerkmale:: _<Erläuternder Text>_
+
+Zuordnung von Bausteinen zu Infrastruktur:: _<Beschreibung der Zuordnung>_
+

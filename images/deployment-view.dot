@@ -1,0 +1,45 @@
+digraph diagram {
+    fontname="Helvetica,Arial,sans-serif"
+    node [fontname="Helvetica,Arial,sans-serif"]
+    edge [fontname="Helvetica,Arial,sans-serif"]
+    compound=true;
+    ranksep=1
+    node[shape=record]
+
+    subgraph cluster_all {
+        label="Humidity sensor deployment view"
+        Env1 [shape=circle
+            label = "environmental\nstimulus"
+            margin = 0
+        ]
+
+	subgraph cluster_sensor {
+            label = ""
+            Sensor1 [label = "sensor (BME630)"] 
+            Contr1 [label = "\<\<binary to read pins and send HTTP\>\>\nwifi chip (ESP8266)"
+                gradientangle="90"
+                fillcolor = "brown:yellow"
+                style = "filled"
+            ]
+            Sensor1 -> Contr1 [label = "signal"]
+        }
+
+        Env1 -> Sensor1
+
+        subgraph cluster_web {
+            label="Raspberry Pi"
+            node[shape=tab]
+            Server[label = "\<\<artifact to receive and handle HTTP\>\>\nweb server"
+                gradientangle="90"
+                fillcolor = "brown:yellow"
+                style = "filled"
+            ]
+            Database [shape=cylinder]
+        }
+
+        Contr1 -> Server [style=dashed, label = "HTTP over Wifi"]
+        Server -> Database [label = "store"]
+    }
+
+}
+
